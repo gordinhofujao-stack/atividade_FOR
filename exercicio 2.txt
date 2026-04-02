@@ -1,0 +1,5 @@
+public class exercicio2{
+public static void main (String[] args){
+    for( int n=15; n<=100;n++){System.out.println("o quadrado de "+n+ " e "+(n*n));}
+}
+}

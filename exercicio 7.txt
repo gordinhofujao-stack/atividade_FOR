@@ -1,0 +1,50 @@
+import java.util.Scanner;
+class exercicio7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);;;
+        
+        double idade;
+        double altura;
+        double peso;
+        double alt10 =0;
+        int pessoa50 =0;
+        int peso40   =0;
+        int media    =0;
+        int n;
+        
+        
+        
+        
+        for (n=1;n<=10;n++)
+        {System.out.println("===================================");
+         System.out.println("Pessoa "+n+" Digite a sua idade");
+         idade = scanner.nextDouble();
+         System.out.println("===================================");
+         System.out.println("Pessoa "+n+" Digite a sua altura");
+         altura = scanner.nextDouble();
+          System.out.println("===================================");
+         System.out.println("Pessoa "+n+" Digite a sua peso");
+         peso = scanner.nextDouble();
+         System.out.println("===================================");
+         
+    if (idade>50){pessoa50++;}  
+    if (idade>=10 && idade<=20){
+        alt10 += altura;
+        media++;}
+    if (peso<40){peso40++;}
+        }    
+     System.out.println("===================================");
+     if (pessoa50>0){
+         System.out.println("Quantidade de pessoas maiores de 50 anos "+pessoa50);}
+    else System.out.println("Nao ha pessoas maiores de 50 anos");
+         System.out.println("===================================");
+         if(media>0){
+         System.out.println("Media das alturas das pessoas com idade entre 10 e 20 anos "+(alt10/media));}
+         else 
+         System.out.println("Nao ha pessoas com idade entre 10 e 20 anos ");
+         System.out.println("===================================");
+    if (peso40>0) { System.out.println("porcentagem de pessoas com peso inferior a 40 quilos "+((peso40 / 10.0)*100)+"%") ;}
+    else {System.out.println("nao pessoas menores que 40kg");}
+         System.out.println("===================================");
+scanner.close();
+}}

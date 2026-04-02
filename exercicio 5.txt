@@ -1,0 +1,59 @@
+import java.util.Scanner; 
+class exercicio { public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in); 
+    double nota1; 
+    double nota2; 
+    double mediaaluno; 
+    double media=0;
+    int aprovado=0; 
+    int exame=0; 
+    int reprovado=0; 
+    
+    for (int n = 1; n <= 6; n++) { 
+        System.out.println("==========================================================================");
+        System.out.println(" digite a nota primeira nota "+"do aluno "+n); nota1 = scanner.nextDouble(); 
+        System.out.println("==========================================================================");
+        System.out.println(" digite a nota segunda nota "+"do aluno "+n); nota2 = scanner.nextDouble(); 
+        System.out.println("==========================================================================");
+        
+        mediaaluno=((nota1+nota2)/2);
+        media += mediaaluno;
+        
+        System.out.println("a media do aluno "+n+ " e "+ mediaaluno);
+        
+        
+
+        
+        if (mediaaluno>=7){ 
+            System.out.println("==========================================================================");
+            System.out.println("APROVADO");
+            aprovado++;
+        } 
+        else if (mediaaluno>=3 ){
+            System.out.println("==========================================================================");
+            System.out.println("EXAME");
+            exame++;
+        }
+        else if(mediaaluno<3){ 
+            System.out.println("==========================================================================");
+            System.out.println("REPROVADO");
+            reprovado++;
+        }
+        System.out.println("=========================================================================="); } 
+        
+        double media1 = media / 6;
+
+        System.out.println("total de aprovados "+aprovado);
+                System.out.println("=========================================================================="); 
+        System.out.println("total de exame "+exame);
+                System.out.println("=========================================================================="); 
+        System.out.println("total de reprovados "+reprovado);
+                System.out.println("=========================================================================="); 
+       
+         System.out.println("media total da sala e "+media1);
+                System.out.println("=========================================================================="); 
+        
+        scanner.close();
+        
+    
+}}
